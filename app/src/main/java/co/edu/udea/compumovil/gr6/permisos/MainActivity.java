@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 .setAction(R.string.settings, new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        openSettings();
+                        abrirConfiguracion();
                     }
                 })
                 .show();
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Abre el intent de detalles de configuración de nuestra app
      */
-    public void openSettings() {
+    public void abrirConfiguracion() {
         Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         intent.setData(Uri.parse("package:" + getPackageName()));
         startActivity(intent);
