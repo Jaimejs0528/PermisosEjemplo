@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         //anteriormente el dialogo de permisos y el usuario lo negó
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            showSnackBar();
+            mostrarSnackBar();
         } else {
             //si es la primera vez se solicita el permiso directamente
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 guardarComentarios();
             } else {
-                showSnackBar();
+                mostrarSnackBar();
             }
         }
     }
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Muestra un snackbar con una acción para abrir "Settings"
      */
-    private void showSnackBar() {
+    private void mostrarSnackBar() {
         Snackbar.make(mLayout, R.string.permission_write_storage,
                 Snackbar.LENGTH_LONG)
                 .setAction(R.string.settings, new View.OnClickListener() {
