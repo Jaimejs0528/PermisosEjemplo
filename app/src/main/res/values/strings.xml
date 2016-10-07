@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Permisos Marshmallow</string>
+    <string name="message_input_save">Escribe lo que desees guardar</string>
+    <string name="save_comment">Guardar comentario</string>
+    <string name="permission_write_storage">Permiso de escritura necesario.</string>
+    <string name="settings">Configuración</string>
+    <string name="message">Se ha almacenado en:</string>
+</resources>
+
